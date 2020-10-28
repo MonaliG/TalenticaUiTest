@@ -1,0 +1,139 @@
+<div class="p-col-12 p-col-nogutter">
+    <div class="benefits-wrap container" id="Benefits">
+        <div class="p-col-12 p-lg-8 p-md-8 p-lg-offset-2 p-md-offset-2">
+            <h3 class="head">Benefits</h3>
+            <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla ullamcorper.
+                Morbi felis orci,
+                lacinia a velit et, sodales...</p>
+        </div>
+
+        <div class="p-grid benefit-list">
+            <div class="p-col-12 p-lg-4 p-md-4 list" *ngFor="let item of benefitsList">
+                <img [src]="item.img" [alt]="item.head">
+                <h4>{{item.head}}</h4>
+                <p>{{item.para}}</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="facilities-wrap" id="Facilities">
+        <div class="container">
+            <div class="p-col-12 p-lg-8 p-md-8 p-lg-offset-2 p-md-offset-2">
+                <h3 class="head">Facilities</h3>
+                <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla
+                    ullamcorper. Morbi felis
+                    orci, lacinia a velit et, sodales...</p>
+            </div>
+
+            <div class="p-grid">
+                <div class="p-col-12 p-md-3 p-lg-3 facility-txt-wrap" *ngFor="let item of facilitiesList">
+                    <img [src]="item.img" [alt]="item.label">
+                    <p>{{item.label}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallary-wrap" id="Gallery">
+        <div class="gallary-container">
+            <div class="p-col-12 p-lg-8 p-md-8 p-lg-offset-2 p-md-offset-2">
+                <h3 class="head">Gallery</h3>
+                <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla
+                    ullamcorper. Morbi felis
+                    orci, lacinia a velit et, sodales...</p>
+            </div>
+
+            <div class="p-grid">
+                <div class="p-col-6 p-lg-4 p-md-4 p-col-nogutter gcontainer" *ngFor="let item of gallaryList">
+                    <img [src]="item.img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pricing-wrap" id="Pricing">
+        <div class="p-col-12 p-lg-8 p-md-8 p-lg-offset-2 p-md-offset-2">
+            <h3 class="head">Pricing</h3>
+            <p>Check out our attractive pricing plan Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta
+                fringilla ullamcorper.</p>
+        </div>
+
+        <div class="price-wrap">
+            <h3><span>₹</span>6000</h3>
+            <p class="info1">per month for single desk</p>
+            <p class="info2">plus taxes as applicable</p>
+        </div>
+        <app-button [btn]="bookNowBtn" (clickEvent)="onSend()"> </app-button>
+    </div>
+
+    <div class="contact-wrap p-col-12" id="Contact">
+        <div class="container">
+            <div class="p-grid">
+                <div class="p-col-12 p-lg-6 p-md-6">
+                    <h3 class="head">Say Hello</h3>
+                    <div>
+                        <p class="add1">BOOTSTRAPALLEY</p>
+                        <p class="add2">B-7/8, Anmol Pride, Baner Pune 411045</p>
+                        <div class="mob-no">
+                            <p>+91 20 4075 1111</p>
+                            <p>+91 20 4075 1177</p>
+                        </div>
+                        <p class="email"> bootstrap-alley@talentica.com</p>
+                    </div>
+                </div>
+                <div class="p-col-12 p-lg-6 p-md-6">
+                    <h3 class="head">Write to us</h3>
+                    <div>
+                        <form [formGroup]='contactUsForm'>
+                            <div class="p-col-12 form-field pd0">
+                                <input type="text" formControlName="name" placeholder="Name*" pInputText>
+                                <div
+                                    *ngIf="contactUsForm.controls.name.errors  && (contactUsForm.controls.name.dirty || contactUsForm.controls.name.touched || submitted)">
+                                    <div class="form-errors" [hidden]="!contactUsForm.controls.name.errors.required">
+                                        Name is required
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-col-12 form-field">
+                                <input type="text" formControlName="email" placeholder="Email Id*" pInputText>
+                                <div
+                                    *ngIf="contactUsForm.controls.email.errors  && (contactUsForm.controls.email.dirty || contactUsForm.controls.email.touched || submitted)">
+                                    <div class="form-errors" [hidden]="!contactUsForm.controls.email.errors.required">
+                                        Email id is required
+                                    </div>
+                                    <div class="form-errors" [hidden]="!contactUsForm.controls.email.errors.pattern">
+                                        Please eneter valid Email id
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-col-12 form-field">
+                                <input type="text" formControlName="phone" placeholder="Contact No." minlength="11"
+                                    maxlength="13" InputText>
+                            </div>
+
+
+                            <div class="p-col-12 form-field">
+                                <textarea formControlName="message" [rows]="10" placeholder="Message"
+                                    pInputTextarea></textarea>
+                                <div class="form-errors"
+                                    *ngIf="contactUsForm.controls.message.errors  && (contactUsForm.controls.message.dirty || contactUsForm.controls.message.touched || submitted)">
+                                </div>
+                            </div>
+
+                        </form>
+                        <app-button [btn]="sendBtn" (clickEvent)="onSend()"> </app-button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-col-12 google-map" #gmap>
+
+    </div>
+
+</div>

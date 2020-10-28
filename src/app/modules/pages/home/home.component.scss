@@ -1,0 +1,294 @@
+img {
+  display: block;
+  height: 400px;
+  width: 100%;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.banner-wrap {
+  position: relative;
+
+  .banner-txt-wrap {
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    text-align: center;
+  }
+}
+
+.benefits-wrap {
+  text-align: center;
+  padding: 50px 0;
+
+  img {
+    height: 77px;
+    margin: 0 auto;
+    width: 77px;
+  }
+
+  h4 {
+    font-size: 18px;
+    color: #444444;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 15px;
+  }
+
+  .benefit-list {
+    p {
+      font-size: 15px;
+      color: #666666;
+      text-align: center;
+      line-height: 20px;
+      letter-spacing: 1px;
+      margin-top: 10px;
+    }
+
+    .list {
+      &:hover {
+        border-radius: 4px;
+        box-shadow: 0 0 10px #ccc;
+      }
+    }
+  }
+}
+
+.facilities-wrap {
+  background: #333333 0% 0% no-repeat padding-box;
+  color: white;
+  padding: 35px 0;
+  text-align: center;
+
+  .facility-txt-wrap {
+    align-items: center;
+    display: flex;
+    padding: 15px 10px;
+    background: transparent;
+    transition: background 0.8s ease, box-shadow 0.8s ease-in;
+
+    p {
+      font-size: 15px;
+      color: #cccccc;
+    }
+
+    &:hover {
+      border-radius: 4px;
+      box-shadow: 0 0 10px #ccc;
+      background: #000;
+    }
+  }
+
+  .head {
+    color: white;
+  }
+
+  .para {
+    color: white;
+  }
+
+  img {
+    height: 32px;
+    margin-right: 20px;
+    width: 32px;
+  }
+}
+
+.gallary-wrap {
+  text-align: center;
+
+  .gallary-container {
+    padding: 50px 40px;
+  }
+
+  .gcontainer {
+    overflow: hidden;
+
+    img {
+      display: block;
+      transition: transform 0.4s;
+    }
+
+    &:hover {
+      cursor: pointer;
+      img {
+        transform: scale(1.3);
+        transform-origin: 50% 50%;
+      }
+    }
+  }
+}
+
+.pricing-wrap {
+  background: #fdba12 0% 0% no-repeat padding-box;
+  text-align: center;
+  padding: 40px 0;
+
+  .price-wrap {
+    width: max-content;
+    margin: 0 auto;
+    border: 1px solid #ffe8bb;
+    background: #ffe8bb;
+    border-radius: 50%;
+    padding: 40px 25px;
+    margin-bottom: 30px;
+
+    h3 {
+      font-size: 68px;
+      margin: 0;
+      position: relative;
+
+      span {
+        font-size: 20px;
+        top: 0;
+        left: 6px;
+        position: absolute;
+      }
+    }
+
+    .info1 {
+      font-size: 16px;
+      color: #1a1a1a;
+      margin: 5px 0;
+    }
+
+    .info2 {
+      font-size: 12px;
+      color: #808080;
+      margin: 5px 0;
+    }
+  }
+}
+
+.contact-wrap {
+  padding: 50px 0;
+
+  .head {
+    margin: 0 0 40px;
+
+    &::after {
+      margin: 0;
+      width: 50%;
+    }
+  }
+
+  .form-field {
+    margin-bottom: 15px;
+
+    input {
+      border: 0;
+      font-size: 18px;
+      color: #808080;
+      line-height: 21px;
+      border-bottom: 1px solid #808080;
+      padding: 10px 0;
+      width: 100%;
+      outline: 0;
+
+      &::placeholder {
+        font-size: 18px;
+        color: #808080;
+        line-height: 21px;
+      }
+    }
+
+    textarea {
+      border: 0;
+      border-bottom: 1px solid #808080;
+      padding: 10px 0;
+      height: 50px;
+      width: 100%;
+      outline: 0;
+
+      &::placeholder {
+        font-size: 18px;
+        color: #808080;
+        line-height: 21px;
+      }
+    }
+
+    &.pd0 {
+      padding-top: 0;
+
+      input {
+        padding-top: 0;
+      }
+    }
+
+    .form-errors {
+      color: red;
+      margin-top: 6px;
+      font-size: 16px;
+    }
+  }
+
+  .add1 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #4d4d4d;
+    line-height: 21.6px;
+    margin-bottom: 0;
+  }
+
+  .add2 {
+    font-size: 16px;
+    line-height: 21.6px;
+    color: #4d4d4d;
+    margin-top: 5px;
+  }
+
+  .mob-no {
+    font-size: 18px;
+    color: #4d4d4d;
+    line-height: 21.6px;
+    margin-top: 20px;
+
+    p {
+      margin: 0;
+
+      &:first-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .email {
+    font-size: 18px;
+    color: #f16739;
+    line-height: 21.6px;
+    margin-top: 20px;
+  }
+}
+
+.google-map {
+  height: 350px;
+}
+
+@media (max-width: 767px) {
+  .facilities-wrap {
+    .facility-txt-wrap {
+      display: block;
+    }
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  .benefits-wrap {
+    padding: 40px 15px;
+  }
+
+  .gallary-wrap {
+    .gallary-container {
+      padding: 50px 15px;
+
+      img {
+        height: 150px;
+      }
+    }
+  }
+}

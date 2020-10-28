@@ -1,0 +1,61 @@
+<div class="header desktop-view">
+  <div class="header-wrap flex">
+    <div class="">
+      <img src="assets/logo.svg" alt="">
+    </div>
+    <div class="menu-wrap flex">
+      <p (click)="onMenuClick('Home')">Home</p>
+      <p (click)="onMenuClick('Benefits')">Benefits</p>
+      <p (click)="onMenuClick('Facilities')">Facilities</p>
+      <p (click)="onMenuClick('Gallery')">Gallery</p>
+      <p (click)="onMenuClick('Pricing')">Pricing</p>
+      <p (click)="onMenuClick('Contact')">Contact us</p>
+    </div>
+  </div>
+</div>
+
+<div class="header mobile-view">
+  <div class="flex">
+    <!-- <div class="hamburger-icon " (click)="onSidebar()"><i class="pi pi-bars"></i></div> -->
+    <div class="">
+      <img class="logo" src="assets/logo.svg" alt="">
+    </div>
+    <img src="assets/banner-img.svg" (click)="onSidebar()" alt="">
+  </div>
+  <p-sidebar [(visible)]="displaySidebar" [baseZIndex]="10000" [fullScreen]="true" [style]="{width:'30em'}" [dismissible]="true" >
+     <div >
+        <p>Home</p>
+        <p>Benefits</p>
+        <p>Facilities</p>
+        <p>Gallery</p>
+        <p>Pricing</p>
+        <p>Contact us</p>
+      </div>
+  </p-sidebar>
+</div>
+
+
+<div class="banner-wrap" id="Home">
+  <div class="banner-txt-wrap desktop-view">
+    <div class="container">
+      <h1>Best Co-working Space at Best Price</h1>
+      <p>Expect the best-in-class! An Alley with a record of successful startups is launching a top-notch
+        co-working space with exclusive amenities, only for tech startups. Recreate history at Bootstrap Alley.
+      </p>
+      <app-button [btn]="bannerBtn" (clickEvent)="onGetStarted()"> </app-button>
+    </div>
+  </div>
+
+  <div class="banner-txt-wrap mobile-view">
+    <div class="container">
+      <h1>Brace Yourself</h1>
+      <p>An alley with a record of successful startups is launching a co-working space exclusively for tech startups.
+        Recreate history at Bootstrap Alley, Baner, Pune.
+      </p>
+      <app-button [btn]="bannerBtn" (clickEvent)="onGetStarted()"> </app-button>
+    </div>
+  </div>
+  <div class="banner-logo desktop-view">
+    <img src="assets/banner-img.svg" alt="">
+  </div>
+</div>

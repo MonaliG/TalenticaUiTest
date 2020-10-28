@@ -1,0 +1,35 @@
+.footer-wrap {
+  .para {
+    font-size: 14px;
+    line-height: 30px;
+    color: #cccccc;
+    margin: 10px 0;
+    text-align: left;
+  }
+
+  .logo {
+    text-align: right;
+
+    .para {
+      text-align: right;
+    }
+  }
+
+  .social-icons {
+    img {
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-wrap {
+    .logo {
+      text-align: left;
+  
+      .para {
+        text-align: left;
+      }
+    }
+  }
+}

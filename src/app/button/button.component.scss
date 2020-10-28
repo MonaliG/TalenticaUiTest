@@ -1,0 +1,25 @@
+button {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  margin: 0;
+  outline: none;
+  padding: 10px 30px;
+  width: auto;
+  cursor: pointer;
+  transition: 0.25s;
+
+  &.primary {
+    background: #f16739;
+    border: solid 3px #f16739;
+    border-radius: 50px;
+    color: white;
+
+    &:hover {
+      color: #000;
+      background: red;
+      border-color: red;
+      transition: all 0.4s ease 0s;
+    }
+  }
+}
